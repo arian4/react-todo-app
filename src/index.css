@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@layer components {
+    .todo-item {
+      @apply flex items-center py-4 px-2 border-b border-light-200 dark:border-light-500 cursor-pointer 	;
+    }
+    .check-box{
+        @apply h-6 w-6 rounded-full border-2 border-light-300 mr-2 cursor-pointer ;
+    }
+    .checked-todo{
+      @apply bg-gradient-to-tl from-primary-left-g to-primary-right-g flex items-center justify-center ;
+    }
+    .tab{
+      @apply font-bold text-light-400 transition hover:text-light-500 dark:hover:text-light-100;
+    }
+    .active-tab {
+      @apply font-bold text-primary-blue;
+    }
+  }
